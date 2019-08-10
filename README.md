@@ -1,24 +1,19 @@
-# README
+## usersテーブル
+|カラム名|カラムの型|オプション|
+|------|----|-------|
+|name|string|null: false,add_index|
+|email|text|null: false,add_index,unique|
+|password|string|null: false|
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### アソシエーション
+- belongs_to :
 
-Things you may want to cover:
+## テーブル
+|カラム名|カラムの型|オプション|
+|------|----|-------|
+|name|string|null: false,add_index|
+|email|text|null: false,add_index,unique|
+|password|string|null: false|
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### アソシエーション
+- belongs_to :
