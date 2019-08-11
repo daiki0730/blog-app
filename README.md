@@ -6,14 +6,18 @@
 |password|string|null: false|
 
 ### アソシエーション
-- belongs_to :
+- has_many :messages
 
-## テーブル
+## messagesテーブル
 |カラム名|カラムの型|オプション|
 |------|----|-------|
-|name|string|null: false,add_index|
-|email|text|null: false,add_index,unique|
-|password|string|null: false|
+|body|text|null: false,add_index|
+|image|string|null: false,add_index,unique|
 
 ### アソシエーション
-- belongs_to :
+- belongs_to :users
+
+### Version
+- Ruby
+- Rails
+- MySQL
