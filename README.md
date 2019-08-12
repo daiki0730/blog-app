@@ -18,6 +18,7 @@
 - belongs_to :users
 
 ### Version
-- Ruby
-- Rails
-- MySQL
+- Ruby 2.5.1
+- RubyGems 2.7.6
+- Rails 5.0.7.2
+- MySQL 5.6.42
