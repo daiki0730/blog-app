@@ -6,16 +6,17 @@
 |password|string|null: false|
 
 ### アソシエーション
-- has_many :messages
+- has_many :post
 
-## messagesテーブル
+## postsテーブル
 |カラム名|カラムの型|オプション|
 |------|----|-------|
-|body|text|null: false,add_index|
-|image|string|null: false,add_index,unique|
+|title|text|null: false|
+|text|text|null: false|
+|user_id|integer|null: false, foreign_key: true|
 
 ### アソシエーション
-- belongs_to :users
+- belongs_to :user
 
 ### Version
 - Ruby 2.5.1
