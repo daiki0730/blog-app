@@ -11,9 +11,10 @@
 ## postsテーブル
 |カラム名|カラムの型|オプション|
 |------|----|-------|
-|title|text|null: false|
-|text|text|null: false|
-|user_id|integer|null: false, foreign_key: true|
+|title|text||
+|text|text||
+|text|image||
+
 
 ### アソシエーション
 - belongs_to :user
