@@ -3,8 +3,28 @@
   %head
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
     %title BlogApp
+    %style{:href => "./style.css", :type => "text/css"}
     = csrf_meta_tags
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+    / Compiled and minified CSS
+    %link{:href => "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css", :rel => "stylesheet"}/
+    / Compiled and minified JavaScript
+    %script{:src => "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"}
+    %script{:crossorigin => "anonymous", :integrity => "sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=", :src => "https://code.jquery.com/jquery-3.4.1.js"}
   %body
-    = yield
+  
+  %nav.light-blue
+    .nav-wrapper
+      %a.brand-logo.right{:href => "#"} blog-app
+      %ul#nav-mobile.left.hide-on-med-and-down
+        %li
+          %a{:href => "sass.html"} Sign in
+        %li
+          %a{:href => "badges.html"} Sign out
+        %li
+          %a{:href => "collapsible.html"} New post
+
+    %script{:src => "./app.js", :type => "text/javascript"}
+
+  = yield
