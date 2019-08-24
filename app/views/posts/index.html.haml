@@ -1,3 +1,4 @@
+=  @post
 %nav.white{:role => "navigation"}
   .nav-wrapper.container
     %a#logo-container.brand-logo{:href => "#"} Logo
@@ -22,7 +23,7 @@
       %br/
       %br/
   .parallax
-    = image_tag "https://wired.jp/wp-content/uploads/2018/01/GettyImages-522585140.jpg",alt: "test"
+    = image_tag 'background1.jpg',alt: 'Unsplashed background img 1'
 .container
   .section
     / Icon Section
@@ -51,7 +52,7 @@
       .row.center
         %h5.header.col.s12.light A modern responsive front-end framework based on Material Design
   .parallax
-    %img{:alt => "Unsplashed background img 2", :src => "background2.jpg"}/
+    = image_tag 'background2.jpg',alt: 'Unsplashed background img 2'
 .container
   .section
     .row
@@ -66,7 +67,7 @@
       .row.center
         %h5.header.col.s12.light A modern responsive front-end framework based on Material Design
   .parallax
-    %img{:alt => "Unsplashed background img 3", :src => "background3.jpg"}/
+    = image_tag 'background3.jpg',alt: 'Unsplashed background img 3'
 %footer.page-footer.teal
   .container
     .row
@@ -99,3 +100,7 @@
     .container
       Made by
       %a.brown-text.text-lighten-3{:href => "http://materializecss.com"} Materialize
+/ Scripts
+%script{:src => "https://code.jquery.com/jquery-2.1.1.min.js"}
+%script{:src => "js/materialize.js"}
+%script{:src => "js/init.js"}

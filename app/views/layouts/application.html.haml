@@ -3,21 +3,17 @@
   %head
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
     %title BlogApp
-    %style{:href => "./style.css", :type => "text/css"}
     = csrf_meta_tags
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
-    / Compiled and minified CSS
-    %link{:href => "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css", :rel => "stylesheet"}/
-    / Compiled and minified JavaScript
-    %script{:src => "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"}
-    %script{:crossorigin => "anonymous", :integrity => "sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=", :src => "https://code.jquery.com/jquery-3.4.1.js"}
+    / 以下マテリアライズCSSペースト
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}/
+    %title Parallax Template - Materialize
+    / CSS
     %link{:href => "https://fonts.googleapis.com/icon?family=Material+Icons", :rel => "stylesheet"}/
     %link{:href => "css/materialize.css", :media => "screen,projection", :rel => "stylesheet", :type => "text/css"}/
     %link{:href => "css/style.css", :media => "screen,projection", :rel => "stylesheet", :type => "text/css"}/
-    / Scripts
-    %script{:src => "https://code.jquery.com/jquery-2.1.1.min.js"}
-    %script{:src => "js/materialize.js"}
-    %script{:src => "js/init.js"}
-%body
-  = yield
+
+  %body
+    = yield
