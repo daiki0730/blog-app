@@ -1,6 +1,6 @@
 = render 'shared/main-header'
 
-.contents.row
+.content.login
   %h2 Log in
   = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
     .field
@@ -11,11 +11,6 @@
       = f.label :password
       %br/
       = f.password_field :password, autocomplete: "off"
-    - if devise_mapping.rememberable?
-      .field
-        = f.label :remember_me
-        %br/
-        = f.check_box :remember_me
     .actions
       = f.submit "Log in"
 

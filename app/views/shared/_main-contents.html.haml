@@ -3,7 +3,10 @@
     .container
       %br/
       %br/
-      %h1.header.center.teal-text.text-lighten-2 Welcome to BlogApp
+      - if user_signed_in?
+        %h1.header.center.teal-text.text-lighten-2 ユーザー's Blog
+      - else
+        %h1.header.center.teal-text.text-lighten-2 Welcome to BlogApp
       .row.center
         %h5.header.col.s12.light There is always light behind the clouds.
       .row.center
@@ -12,7 +15,7 @@
             %a.post{:href => "/posts/new"} New Post
         - else
           .grid-6
-            = link_to "New Post", new_user_session_path, class: 'post'
+            = link_to "New Post", new_user_registration_path, class: 'post'
       %br/
       %br/
   .parallax
