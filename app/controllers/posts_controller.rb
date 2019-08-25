@@ -4,4 +4,7 @@ class PostsController < ApplicationController
     @post = "プログラミングなう"
   end
 
+  def new
+  end
+
 end
