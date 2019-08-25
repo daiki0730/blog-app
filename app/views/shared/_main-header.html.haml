@@ -3,9 +3,9 @@
     %a#logo-container.brand-logo{:href => "#"} BlogApp
     %ul.right.hide-on-med-and-down
       %li
-        %a{:href => "#"} Login
-    %ul#nav-mobile.sidenav
-      %li
-        %a{:href => "#"} Navbar Link
-    %a.sidenav-trigger{"data-target" => "nav-mobile", :href => "#"}
-      %i.material-icons menu
+        - if user_signed_in?
+          .user_nav.grid-6
+            = link_to "Logout", destroy_user_session_path, method: :delete
+        - else
+          .grid-6
+            = link_to "Signup", new_user_registration_path, class: 'Singup'

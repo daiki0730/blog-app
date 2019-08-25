@@ -7,7 +7,12 @@
       .row.center
         %h5.header.col.s12.light There is always light behind the clouds.
       .row.center
-        %a#download-button.btn-large.waves-effect.waves-light.teal.lighten-1{:href => "http://materializecss.com/getting-started.html"} Sign Up
+        - if user_signed_in?
+          .user_nav.grid-6
+            %a.post{:href => "/posts/new"} New Post
+        - else
+          .grid-6
+            = link_to "New Post", new_user_session_path, class: 'post'
       %br/
       %br/
   .parallax
