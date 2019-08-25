@@ -1,0 +1,11 @@
+%nav.white{:role => "navigation"}
+  .nav-wrapper.container
+    %a#logo-container.brand-logo{:href => "#"} Blog App
+    %ul.right.hide-on-med-and-down
+      %li
+        %a{:href => "#"} New Post
+    %ul#nav-mobile.sidenav
+      %li
+        %a{:href => "#"} Navbar Link
+    %a.sidenav-trigger{"data-target" => "nav-mobile", :href => "#"}
+      %i.material-icons menu
