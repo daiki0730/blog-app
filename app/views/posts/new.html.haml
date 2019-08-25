@@ -1,5 +1,12 @@
 = render 'shared/main-header'
 
+.content.post
+  = form_tag('/posts', method: :post) do
+    %h3
+      投稿する
+    %input{:name => "image", :placeholder => "Image Url", :type => "text"}/
+    %textarea{:cols => "30", :name => "text", :placeholder => "text", :rows => "10"}
+    %input{:type => "submit", :value => "SENT"}/
 
 
 = render 'shared/main-footer'
