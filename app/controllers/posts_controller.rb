@@ -7,17 +7,17 @@ class PostsController < ApplicationController
   end
 
   def create
-    Post.create(image: "", text: "")
+    Post.create(post_params)
   end
 
   def show
-    @posts = Post.order("created_at DESC")
+    @posts = Post.order("created_at DESC").page(params[:page]).per(3)
   end
 
   private
 
   def post_params
-    params.permit(:name, :image, :text)
+    params.permit(:title, :image, :text)
   end
 
 end

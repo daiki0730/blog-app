@@ -1,8 +1,50 @@
 = render 'shared/main-header'
-
-
-投稿した内容一覧
-= @posts
-
+%h5.mypage
+  ユーザーネーム 投稿一覧
+#content.hfeed
+  #content-inner
+    #wrapper
+      #main
+        #main-inner
+          - @posts.each do |post|
+            %article#entry-26006613405060410.entry.hentry.js-entry-article.date-first.autopagerize_page_element.chars-200.words-100.mode-html.entry-odd{"data-keyword-campaign" => "", "data-publication-type" => "entry", "data-uuid" => "26006613405060410"}
+              .entry-inner
+                %header.entry-header
+                  .date.entry-date.first
+                    %a{:href => "https://daiki0730.hatenablog.com/archive/2019/08/25", :rel => "nofollow"}
+                      %time{:datetime => "2019-08-25T08:28:39Z", :pubdate => "", :title => "2019-08-25T08:28:39Z"}
+                        %span.date-year 2019
+                        %span.hyphen -
+                        %span.date-month 08
+                        %span.hyphen -
+                        %span.date-day 25
+                  %h1.entry-title
+                    %a.entry-title-link.bookmark{:style => "background-image: url(#{post.title});"}
+                .entry-content
+                  %p テスト
+                .customized-footer
+                  #entry-footer-secondary-modules.entry-footer-modules
+                .comment-box
+                  %ul.comment
+                    %li.read-more-comments{:style => "display: none;"}
+                      %a もっと読む
+                  %a.leave-comment-title{:style => "display: inline;"} コメントを書く
+          = paginate(@posts)
 
 = render 'shared/main-footer'
+
+.contents.row
+  - @posts.each do |post|
+    .content_post{:style => "background-image: url(#{post.image});"}
+      = simple_format(post.text)
+      %span.name= post.title
+
+
+
+
+
+
+
+
+
+
