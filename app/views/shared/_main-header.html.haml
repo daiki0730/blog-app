@@ -6,6 +6,8 @@
       %li
         - if user_signed_in?
           .user_nav.grid-6
+            = link_to "Mypage", posts_show_path
+          .user_nav.grid-6
             = link_to "Logout", destroy_user_session_path, method: :delete
         - else
           .grid-6

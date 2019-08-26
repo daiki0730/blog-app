@@ -32,19 +32,3 @@
           = paginate(@posts)
 
 = render 'shared/main-footer'
-
-.contents.row
-  - @posts.each do |post|
-    .content_post{:style => "background-image: url(#{post.image});"}
-      = simple_format(post.text)
-      %span.name= post.title
-
-
-
-
-
-
-
-
-
-

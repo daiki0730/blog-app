@@ -4,7 +4,7 @@
   = form_tag('/posts', method: :post) do
     %h3
       投稿する
-    %textarea{:name => "title", :placeholder => "Title", :size => "50", :type => "text"}
+    %input{:name => "title", :placeholder => "Title", :size => "50", :type => "text"}
     %input{:name => "image", :placeholder => "Image Url", :type => "text"}/
     %textarea{:cols => "200", :name => "text", :placeholder => "Text", :rows => "10"}
     %input{:type => "submit", :value => "SENT"}/
