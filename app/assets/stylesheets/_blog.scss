@@ -1,7 +1,7 @@
 // 全体
 h5.mypage {
   color: black;
-  margin: 30px 0 0 120px;
+  margin: 30px 0 0 220px;
 }
 
 #content.hfeed {
@@ -25,7 +25,7 @@ h5.mypage {
 }
 
 nav.pagination{
-  margin: 30px 0 0 120px;
+  margin: 30px 0 10px 200px;
 }
 
 nav.pagination,span.page {
@@ -43,10 +43,13 @@ nav a {
 // 投稿日時
 
 .entry {
-  padding: 8% 9% 5%;
+  padding: 70px 100px 70px 100px;
   background: #fff;
   border: 1px solid #f0f1f1;
-  margin: 2em 100px;
+  margin: 2em 200px;
+}
+
+.entry-inner {
 }
 
 .entry-header {
