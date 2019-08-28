@@ -32,7 +32,11 @@
                       %a もっと読む
                   %a.leave-comment-title{:style => "display: inline;"} コメントを書く
                   %a
+                    = link_to '編集', "/posts/#{post.id}/edit",class: "leave-delete-title", method: :get
+                  %a
                     = link_to '削除',"/posts/#{post.id}", class: "leave-delete-title", method: :delete
+
           = paginate(@posts)
 
 = render 'shared/main-footer'
+
