@@ -21,7 +21,7 @@
                   %h1.entry-title
                     %a.entry-title-link.bookmark{:style => "background-image: url(#{post.title});"}
                 .entry-content
-                  %p テスト
+                  %p = post.title
                 .customized-footer
                   #entry-footer-secondary-modules.entry-footer-modules
                 .comment-box
@@ -32,3 +32,4 @@
           = paginate(@posts)
 
 = render 'shared/main-footer'
+
