@@ -43,7 +43,7 @@ nav a {
 // 投稿日時
 
 .entry {
-  padding: 70px 100px 70px 100px;
+  padding: 70px 100px 30px 100px;
   background: #fff;
   border: 1px solid #f0f1f1;
   margin: 2em 200px;
@@ -53,7 +53,7 @@ nav a {
 }
 
 .entry-header {
-  margin-bottom: 3em;
+  margin-bottom: 20px;
   position: relative;
 }
 
@@ -67,11 +67,11 @@ nav a {
 }
 
 // タイトル
-.entry-title {
+h1.entry-title {
   font-size: 190%;
-  margin-bottom: .5em;
   font-weight: 400;
   line-height: 1.5;
+  margin: 0;
 }
 
 a.entry-title-link.bookmark {

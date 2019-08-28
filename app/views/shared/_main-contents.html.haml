@@ -4,7 +4,8 @@
       %br/
       %br/
       - if user_signed_in?
-        %h1.header.center.teal-text.text-lighten-2 ユーザー's Blog
+        %h1.header.center.teal-text.text-lighten-2
+          = current_user.nickname
       - else
         %h1.header.center.teal-text.text-lighten-2 Welcome to BlogApp
       .row.center
