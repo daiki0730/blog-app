@@ -11,6 +11,11 @@ class PostsController < ApplicationController
     Post.create(title: post_params[:title], image: post_params[:image], text: post_params[:text], user_id: current_user.id)
   end
 
+  def destroy
+    post = Post.find(params[:id])
+    post.destroy if post.user_id == current_user.id
+  end
+
   private
 
   def post_params
