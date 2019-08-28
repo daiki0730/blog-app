@@ -118,10 +118,11 @@ a.entry-title-link.bookmark {
   color: #119e4d;
 }
 
-.comment-box .leave-comment-title {
+.comment-box .leave-delete-title, .leave-comment-title{
   background: #f9fafb;
   border: 1px solid #cfd8d8;
   color: black;
   padding: .5rem 1rem;
   font-size: .9rem;
+  margin-right: 10px;
 }

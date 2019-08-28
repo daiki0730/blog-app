@@ -31,6 +31,8 @@
                     %li.read-more-comments{:style => "display: none;"}
                       %a もっと読む
                   %a.leave-comment-title{:style => "display: inline;"} コメントを書く
+                  %a
+                    = link_to '削除',"/posts/#{post.id}", class: "leave-delete-title", method: :delete
           = paginate(@posts)
 
 = render 'shared/main-footer'
