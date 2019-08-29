@@ -18,7 +18,7 @@
                         %span.date-month 08
                         %span.hyphen -
                         %span.date-day 25
-                  %h1.entry-title
+                  .entry-title
                     = @post.title
                   %a.entry-title-link.bookmark
                     = @post.image
@@ -27,11 +27,27 @@
                 .customized-footer
                   #entry-footer-secondary-modules.entry-footer-modules
                 .comment-box
+                  %h9.mypage コメント一覧
+                  - if @comments
+                    - @comments.each do |comment|
+                      .comments
+                        %strong.comment-name
+                          = link_to comment.user.nickname, "/users/#{comment.user_id}"
+                          ：
+                        = comment.text
+                    .comment-bottom
+                .comment-box-comment
+                - if current_user
+                  = form_tag("/posts/#{@post.id}/comments", method: :post) do
+                    .comment-form
+                      %textarea{:cols => "30", :name => "text", :placeholder => "コメントを書く", :rows => "2"}
+                    .comment-input
+                      %input{:type => "submit", :value => "SENT"}/
+                .comment-box.box
                   %a
-                    = link_to 'コメント', "/posts/#{@post.id}",class: "leave-comment-title", method: :get
+                    = link_to '記事を編集', "/posts/#{@post.id}/edit",class: "leave-delete-title", method: :get
                   %a
-                    = link_to '編集', "/posts/#{@post.id}/edit",class: "leave-delete-title", method: :get
-                  %a
-                    = link_to '削除',"/posts/#{@post.id}", class: "leave-delete-title", method: :delete
+                    = link_to '記事を削除',"/posts/#{@post.id}", class: "leave-delete-title", method: :delete
+
 
 = render 'shared/main-footer'
