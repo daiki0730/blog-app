@@ -1,13 +1,15 @@
 = render 'shared/main-header'
 
 .content.post
-  = form_tag('/posts', method: :post) do
-    %h3
-      投稿する
-    %input{:name => "title", :placeholder => "Title", :size => "50", :type => "text"}
-    %input{:autofocus => "true", :name => "image", :placeholder => "Image URL", :type => "text"}/
-    %textarea{:cols => "200", :name => "text", :placeholder => "Text", :rows => "10"}
-    %input{:type => "submit", :value => "SENT"}/
-
+  = form_for @post do |f|
+    = f.text_field :title
+    = f.file_field :image
+    = f.text_area :text
+    = f.submit 'SENT'
 
 = render 'shared/main-footer'
+
+
+
+
+

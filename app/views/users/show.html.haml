@@ -1,6 +1,7 @@
 = render 'shared/main-header'
 %h5.mypage
-  = current_user.nickname
+  = link_to user_path(id: current_user.id),style: 'color: black;' do
+    = current_user.nickname
 #content.hfeed
   #content-inner
     #wrapper
@@ -19,16 +20,12 @@
                         %span.hyphen -
                         %span.date-day 25
                   %h1.entry-title
-                    = post.title
+                    = link_to "/posts/#{post.id}",class: "leave-delete-title",style: 'color: black;', method: :get do
+                      = post.title
                   %a.entry-title-link.bookmark
-                    = post.image
-                .entry-content
-                  = post.text
-                .customized-footer
-                  #entry-footer-secondary-modules.entry-footer-modules
+                    = link_to "/posts/#{post.id}",class: "leave-delete-title", method: :get do
+                      = image_tag post.image
                 .comment-box.bocks
-                  %a
-                    = link_to '詳細', "/posts/#{post.id}",class: "leave-delete-title", method: :get
 
           = paginate(@posts)
 

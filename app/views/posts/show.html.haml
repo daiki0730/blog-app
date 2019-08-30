@@ -1,6 +1,7 @@
 = render 'shared/main-header'
 %h5.mypage
-  = current_user.nickname
+  = link_to user_path(id: current_user.id), style: 'color: black;' do
+    = current_user.nickname
 #content.hfeed
   #content-inner
     #wrapper
@@ -21,7 +22,7 @@
                   .entry-title
                     = @post.title
                   %a.entry-title-link.bookmark
-                    = @post.image
+                    =image_tag @post.image
                 .entry-content
                   = @post.text
                 .customized-footer
