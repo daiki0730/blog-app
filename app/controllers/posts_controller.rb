@@ -1,5 +1,7 @@
 class PostsController < ApplicationController
 
+  before_action :set_post, only [:search]
+
   def index
     @posts = Post.includes(:user).page(params[:page]).per(5).order("created_at DESC")
   end
@@ -29,6 +31,9 @@ class PostsController < ApplicationController
   def show
     @post = Post.find(params[:id])
     @comments = @post.comments.includes(:user)
+  end
+
+  def search
   end
 
   private

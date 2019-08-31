@@ -1,0 +1,27 @@
+input#post_title.form_title {
+}
+
+label {
+  display: block;
+}
+
+label.label_title {
+  display: block;
+  margin-top: 50px;
+}
+
+label.label_image {
+  display: block;
+  margin: 10px 0 5px 0;
+}
+
+label.label_text {
+  display: block;
+  margin: 15px 0 5px 0;
+}
+
+input.submit_button {
+  width: 400px;
+  margin: 30px 0 100px 130px;
+  padding: 10px;
+}

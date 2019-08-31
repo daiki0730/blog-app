@@ -2,14 +2,13 @@
 
 .content.post
   = form_for @post do |f|
-    = f.text_field :title
-    = f.file_field :image
-    = f.text_area :text
-    = f.submit 'SENT'
+    = f.label :title, class: 'label_title'
+    = f.text_field :title, class: 'form_title', placeholder: 'type a title'
+    = f.label :image, class: 'label_image'
+    = f.file_field :image, class: 'form_image'
+    = f.label :text, class: 'label_text'
+    = f.text_area :text, class: 'form_text',placeholder: 'type a text'
+    = f.submit 'SENT', class: 'submit_button'
 
 = render 'shared/main-footer'
-
-
-
-
 
