@@ -109,7 +109,7 @@ a.entry-title-link.bookmark {
 
 .comment-box-comment {
   margin: 0 -11%;
-  padding: 10px 11% 0;
+  padding: 30px 11% 0;
   border-top: 1px solid #f0f1f1;
 }
 
@@ -186,4 +186,9 @@ strong.comment-name a {
 
 .comment-form {
   height: 20px;
+}
+
+.entry-name {
+  font-size: 20px;
+  margin-bottom: 10px;
 }
