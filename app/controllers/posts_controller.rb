@@ -32,7 +32,8 @@ class PostsController < ApplicationController
     @comments = @post.comments.includes(:user)
   end
 
-  def search
+  def slide
+    @posts = Post.all.page(params[:page]).per(5).order("created_at DESC")
   end
 
   private

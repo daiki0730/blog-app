@@ -23,15 +23,12 @@
       %br/
   .parallax
     = image_tag 'background1.jpg',alt: 'Unsplashed background img 1'
-%h5.mypage
-  = link_to user_path(id: current_user.id), style: 'color: black;' do
-    = current_user.nickname
 #content.hfeed
   #content-inner
     #wrapper
       #main
         #main-inner
-          - if user_signed_in? && current_user.id == @post.user_id
+          - @posts.each do |post|
             %article#entry-26006613405060410.entry.hentry.js-entry-article.date-first.autopagerize_page_element.chars-200.words-100.mode-html.entry-odd{"data-keyword-campaign" => "", "data-publication-type" => "entry", "data-uuid" => "26006613405060410"}
               .entry-inner
                 %header.entry-header
@@ -43,36 +40,11 @@
                         %span.date-month 08
                         %span.hyphen -
                         %span.date-day 25
-                  .entry-title
-                    = @post.title
+                  %h1.entry-title
+                    = link_to "/posts/#{post.id}",class: "leave-delete-title",style: 'color: black;', method: :get do
+                      = post.title
                   %a.entry-title-link.bookmark
-                    =image_tag @post.image
-                .entry-content
-                  = @post.text
-                .customized-footer
-                  #entry-footer-secondary-modules.entry-footer-modules
-                .comment-box
-                  %h9.mypage コメント一覧
-                  - if @comments
-                    - @comments.each do |comment|
-                      .comments
-                        %strong.comment-name
-                          = link_to comment.user.nickname, "/users/#{comment.user_id}"
-                          ：
-                        = comment.text
-                    .comment-bottom
-                .comment-box-comment
-                - if current_user
-                  = form_tag("/posts/#{@post.id}/comments", method: :post) do
-                    .comment-form
-                      %textarea{:cols => "30", :name => "text", :placeholder => "コメントを書く", :rows => "2"}
-                    .comment-input
-                      %input{:type => "submit", :value => "SENT"}/
-                .comment-box.box
-                  %a
-                    = link_to '記事を編集', "/posts/#{@post.id}/edit",class: "leave-delete-title", method: :get
-                  %a
-                    = link_to '記事を削除',"/posts/#{@post.id}", class: "leave-delete-title", method: :delete
-
+                    = link_to "/posts/#{post.id}",class: "leave-delete-title", method: :get do
+                      = image_tag post.image
 
 = render 'shared/main-footer'
