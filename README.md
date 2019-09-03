@@ -1,6 +1,9 @@
 # プロジェクト概要
+
+![Alt Text](http://www.sheawong.com/wp-content/uploads/2013/08/keephatin.gif)
+
 ## プログラム（プロジェクト）名
-BlogApp for SAO(ブログアップ フォー エスエーオー)
+「BlogApp for SAO」(ブログアップ フォー エスエーオー)
 
 <!-------------------------------------------------- -->
 ## プログラムの概要やビジュアル（UI）の紹介
