@@ -4,8 +4,9 @@
 
 <!-------------------------------------------------- -->
 ## ビジュアル（UI）の紹介
-### トップページ(ログイン前) ***
+### トップページ(ログイン前)
 ![result](https://user-images.githubusercontent.com/46291510/64193266-61672f00-ceb7-11e9-810c-c3737d4ac84f.gif)<br>
+***
 ### トップページ(ログイン後)
 ![result](https://user-images.githubusercontent.com/46291510/64193266-61672f00-ceb7-11e9-810c-c3737d4ac84f.gif)<br>
 ### Twitter認証
