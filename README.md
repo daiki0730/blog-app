@@ -8,29 +8,32 @@
 ### ・トップページ(ログイン前)
 ![result](https://user-images.githubusercontent.com/46291510/64193266-61672f00-ceb7-11e9-810c-c3737d4ac84f.gif)<br>
 ***
-### トップページ(ログイン後)
+### トップページ(ログイン後,全ユーザー投稿ページ)
 ![result](https://user-images.githubusercontent.com/46291510/64193266-61672f00-ceb7-11e9-810c-c3737d4ac84f.gif)<br>
 ***
 ### Twitter認証
-![result](https://user-images.githubusercontent.com/46291510/64193266-61672f00-ceb7-11e9-810c-c3737d4ac84f.gif)<br>
+![result](https://user-images.githubusercontent.com/46291510/64194836-05060e80-cebb-11e9-84ea-0cd90510884b.png)<br>
 ***
 ### 新規登録画面
-![result](https://user-images.githubusercontent.com/46291510/64193266-61672f00-ceb7-11e9-810c-c3737d4ac84f.gif)<br>
+![result](https://user-images.githubusercontent.com/46291510/64194706-c83a1780-ceba-11e9-9ff1-292aed7da180.png)<br>
 ***
 ### ログイン画面
 ![result](https://user-images.githubusercontent.com/46291510/64194574-72656f80-ceba-11e9-95c7-427813adfcf0.png)<br>
 ***
 ### 投稿画面
+![result](https://user-images.githubusercontent.com/46291510/64195110-a1301580-cebb-11e9-9161-3976db128cf7.png)<br>
+***
+### 記事詳細画面
 ![result](https://user-images.githubusercontent.com/46291510/64193266-61672f00-ceb7-11e9-810c-c3737d4ac84f.gif)<br>
 ***
 ### 編集画面
-![result](https://user-images.githubusercontent.com/46291510/64193266-61672f00-ceb7-11e9-810c-c3737d4ac84f.gif)<br>
+![result](https://user-images.githubusercontent.com/46291510/64195306-1ac80380-cebc-11e9-8b96-0d6d6e66e128.png)<br>
 ***
 ### 削除画面
-![result](https://user-images.githubusercontent.com/46291510/64193266-61672f00-ceb7-11e9-810c-c3737d4ac84f.gif)<br>
+![result](https://user-images.githubusercontent.com/46291510/64195491-8f02a700-cebc-11e9-87bc-181d373bc1c7.png)<br>
 ***
 ### マイページ(自身の投稿のみ表示)
-![result](https://user-images.githubusercontent.com/46291510/64193266-61672f00-ceb7-11e9-810c-c3737d4ac84f.gif)<br>
+![result](https://user-images.githubusercontent.com/46291510/64195393-5367dd00-cebc-11e9-9f1f-b5f1f6327ee8.png)<br>
 
 
 <!-------------------------------------------------- -->
@@ -78,7 +81,7 @@
 ## 使用技術
 - Twitter APIを利用したログイン認証機能を実装
 - gem deviseを利用したログイン、ログアウト機能を実装
-- RESTfulな設計を意識し記事の投稿、編集、削除、コメント機能を実装
+- RESTfulな設計を意識し記事の投稿、画像投稿、編集、削除、コメント機能を実装
 - 自身の記事だけを閲覧できるマイページを実装
 - 記事の編集、削除は投稿者しかできない設計
 - トップページはMaterializeCSSフレームワークを使用

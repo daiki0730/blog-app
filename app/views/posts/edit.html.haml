@@ -7,7 +7,7 @@
     %input{:name => "title", :placeholder => "Title", :size => "50", :type => "text", :value => "#{@post.title}"}
     %input{:autofocus => "true", :name => "image", :placeholder => "Image Url", :type => "text", :value => "#{@post.image}"}/
     %textarea{:cols => "30", :name => "text", :placeholder => "Text", :rows => "10"}= @post.text
-    %input{:type => "submit", :value => "SENT"}/
+    %input{:type => "submit", :value => "SENT", :class =>"submit_button"}/
 
 
 = render 'shared/main-footer'
