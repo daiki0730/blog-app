@@ -1,6 +1,7 @@
 # プロジェクト概要
 
-![](https://i.gyazo.com/307a81dfdcd1da00db3be0bd9513101f.gif)
+![Alt Text](https://i.gyazo.com/307a81dfdcd1da00db3be0bd9513101f.gif)
+
 
 ## プログラム（プロジェクト）名
 「BlogApp for SAO」(ブログアップ フォー エスエーオー)
