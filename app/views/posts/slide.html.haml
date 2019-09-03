@@ -9,20 +9,17 @@
         %h1.header.center.teal-text.text-lighten-2
           = current_user.nickname
       - else
-        %h1.header.center.teal-text.text-lighten-2 Welcome to BlogApp
+        %h1.header.center.teal-text.text-lighten-2 Welcome to BlogApp for SAO
       .row.center
-        %h5.header.col.s12.light There is always light behind the clouds.
+        %h5.header.col.s12.light This app was created to consider the technical aspects of Sword Art Online (SAO).
       .row.center
         - if user_signed_in?
           .user_nav.grid-6
             = link_to "New Post", new_post_path, class: 'post'
-        - else
-          .grid-6
-            = link_to "Sign up", new_user_registration_path, class: 'post'
       %br/
       %br/
   .parallax
-    = image_tag 'background1.jpg',alt: 'Unsplashed background img 1'
+    = image_tag 'image1.jpg',alt: 'Unsplashed'
 #content.hfeed
   #content-inner
     #wrapper

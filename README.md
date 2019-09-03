@@ -1,6 +1,6 @@
 # プロジェクト概要
 
-![Alt Text](http://www.sheawong.com/wp-content/uploads/2013/08/keephatin.gif)
+![Alt Text](https://gyazo.com/307a81dfdcd1da00db3be0bd9513101f)
 
 ## プログラム（プロジェクト）名
 「BlogApp for SAO」(ブログアップ フォー エスエーオー)
@@ -50,6 +50,9 @@
 - Twitter APIを利用したログイン認証機能を実装
 - gem deviseを利用したログイン、ログアウト機能を実装
 - RESTfulな設計を意識し記事の投稿、編集、削除、コメント機能を実装
+- 自身の記事だけを閲覧できるマイページを実装
+- 記事の編集、削除は投稿者しかできない設計
+- トップページはMaterializeCSSフレームワークを使用
 
 <!-------------------------------------------------- -->
 ## データベース設計
