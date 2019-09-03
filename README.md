@@ -8,8 +8,8 @@
 ### ・トップページ(ログイン前)
 ![result](https://user-images.githubusercontent.com/46291510/64193266-61672f00-ceb7-11e9-810c-c3737d4ac84f.gif)<br>
 ***
-### トップページ(ログイン後,全ユーザー投稿ページ)
-![result](https://user-images.githubusercontent.com/46291510/64193266-61672f00-ceb7-11e9-810c-c3737d4ac84f.gif)<br>
+### トップページ(ログイン後 = 全ユーザー投稿ページ)
+![result](https://user-images.githubusercontent.com/46291510/64195951-b0b05e00-cebd-11e9-9617-4e4af28badab.gif)<br>
 ***
 ### Twitter認証
 ![result](https://user-images.githubusercontent.com/46291510/64194836-05060e80-cebb-11e9-84ea-0cd90510884b.png)<br>
@@ -24,7 +24,7 @@
 ![result](https://user-images.githubusercontent.com/46291510/64195110-a1301580-cebb-11e9-9161-3976db128cf7.png)<br>
 ***
 ### 記事詳細画面
-![result](https://user-images.githubusercontent.com/46291510/64193266-61672f00-ceb7-11e9-810c-c3737d4ac84f.gif)<br>
+![result](https://user-images.githubusercontent.com/46291510/64196293-84e1a800-cebe-11e9-8c5a-5924afe873b4.gif)<br>
 ***
 ### 編集画面
 ![result](https://user-images.githubusercontent.com/46291510/64195306-1ac80380-cebc-11e9-8b96-0d6d6e66e128.png)<br>
