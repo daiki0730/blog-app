@@ -9,59 +9,80 @@
       - else
         %h1.header.center.teal-text.text-lighten-2 Welcome to BlogApp
       .row.center
-        %h5.header.col.s12.light There is always light behind the clouds.
+        %h5.header.col.s12.light This app was created to consider the technical aspects of Sword Art Online (SAO).
       .row.center
         - if user_signed_in?
           .user_nav.grid-6
             = link_to "New Post", new_post_path, class: 'post'
-        - else
-          .grid-6
-            = link_to "Sign up", new_user_registration_path, class: 'post'
       %br/
       %br/
   .parallax
-    = image_tag 'background1.jpg',alt: 'Unsplashed background img 1'
+    = image_tag 'image1.jpg',alt: 'Unsplashed'
 .container
   .section
     / Icon Section
     .row
       .col.s12.m4
         .icon-block
-          %h2.center.brown-text
-            %i.material-icons flash_on
-          %h5.center Speeds up development
-          %p.light We did most of the heavy lifting for you to provide a default stylings that incorporate our custom components. Additionally, we refined animations and transitions to provide a smoother experience for developers.
+          = link_to new_user_registration_path do
+            %h2.center.brown-text
+              %i.material-icons.edit edit
+            %h5.center Sign up
+            %p.light Click here for new registration.It ’s super simple because you only need to set your name, email address and password.
       .col.s12.m4
         .icon-block
-          %h2.center.brown-text
-            %i.material-icons group
-          %h5.center User Experience Focused
-          %p.light By utilizing elements and principles of Material Design, we were able to create a framework that incorporates components and animations that provide more feedback to users. Additionally, a single underlying responsive system across all platforms allow for a more unified user experience.
+          = link_to new_user_session_path do
+            %h2.center.brown-text
+              %i.material-icons.key vpn_key
+            %h5.center Login
+            %p.light If you are registered, please login here.I need to enter my email address and password, but it doesn't matter
       .col.s12.m4
         .icon-block
-          %h2.center.brown-text
-            %i.material-icons settings
-          %h5.center Easy to work with
-          %p.light We have provided detailed documentation as well as specific code examples to help new users get started. We are also always open to feedback and can answer any questions a user may have about Materialize.
+          = link_to '/auth/twitter', :id => "twitter" do
+            %h2.center.brown-text
+              = image_tag 'twitter_logo.png',alt: 'Unsplashed', size: '50x50'
+            %h5.center Twitter Login
+            %p.light You can log in if you have a Twitter account.It's great that you can log in easily. The time is money.
 .parallax-container.valign-wrapper
   .section.no-pad-bot
     .container
       .row.center
-        %h5.header.col.s12.light Change before you have to.
+        %h5.header.col.s12.light This world may be a virtual space created by someone.
   .parallax
-    = image_tag 'background2.jpg',alt: 'Unsplashed background img 2'
+    = image_tag 'image2.jpg',alt: 'Unsplashed'
 .container
   .section
     .row
       .col.s12.center
         %h3
           %i.mdi-content-send.brown-text
-        %h4.center Contact
-        %p.left-align.light Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque id nunc nec volutpat. Etiam pellentesque tristique arcu, non consequat magna fermentum ac. Cras ut ultricies eros. Maecenas eros justo, ullamcorper a sapien id, viverra ultrices eros. Morbi sem neque, posuere et pretium eget, bibendum sollicitudin lacus. Aliquam eleifend sollicitudin diam, eu mattis nisl maximus sed. Nulla imperdiet semper molestie. Morbi massa odio, condimentum sed ipsum ac, gravida ultrices erat. Nullam eget dignissim mauris, non tristique erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
+        %h4.center Contact by Nishida Daiki
+        .col.s12.m4
+          .icon-block
+            = link_to 'https://github.com/daiki0730' do
+              %h2.center.brown-text
+                = image_tag 'github.png',alt: 'Unsplashed', size: '50x50'
+              %h5.center GitHub
+              %p.light Nishida Daiki's account. GitHub is a software development platform that hosts source code. Use Git for the code version control system.
+        .col.s12.m4
+          .icon-block
+            = link_to 'https://twitter.com/Ilovfcsnd' do
+              %h2.center.brown-text
+                = image_tag 'twitter.png',alt: 'Unsplashed', size: '50x50'
+              %h5.center Twitter
+              %p.light Nishida Daiki's account. Twitter is a social networking service from Twitter, Inc., headquartered in San Francisco, California.
+        .col.s12.m4
+          .icon-block
+            = link_to 'https://www.facebook.com/profile.php?id=100009037160238&ref=bookmarks' do
+              %h2.center.brown-text
+                = image_tag 'facebook.png',alt: 'Unsplashed', size: '50x50'
+              %h5.center Facebook
+              %p.light Nishida Daiki's account. Facebook (FB) is the world's largest social networking service (SNS) headquartered in Menlo Park, California.
+
 .parallax-container.valign-wrapper
   .section.no-pad-bot
     .container
       .row.center
-        %h5.header.col.s12.light Love the life you live. Live the life you love.
+        %h5.header.col.s12.light Is the SAO world a virtual image or the future of reality to come?
   .parallax
-    = image_tag 'background3.jpg',alt: 'Unsplashed background img 3'
+    = image_tag 'image3',alt: 'Unsplashed'

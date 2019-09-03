@@ -1,7 +1,7 @@
 %nav.white{:role => "navigation"}
   .nav-wrapper.container
     %a#logo-container
-      = link_to "BlogApp", root_path, class: 'brand-logo'
+      = link_to "Blog App", slide_posts_path, class: 'brand-logo'
     %ul.right.hide-on-med-and-down
       %li
         - if user_signed_in?
@@ -14,7 +14,7 @@
           .user_nav.grid-6
             = link_to "Logout", destroy_user_session_path, method: :delete
         - else
-          .user_nav.grid-6.grid-6
+          .user_nav.grid-6
             = link_to "Sign up", new_user_registration_path, class: 'Singup'
-          .user_nav.grid-6.grid-6
+          .user_nav.grid-6
             = link_to "Login", new_user_session_path, class: 'Singup'

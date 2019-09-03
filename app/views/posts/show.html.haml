@@ -1,49 +1,49 @@
-= render 'shared/main-header'
-%h5.mypage
-  = link_to user_path(id: current_user.id), style: 'color: black;' do
-    = current_user.nickname
+= render 'shared/login-header'
 #content.hfeed
   #content-inner
     #wrapper
       #main
         #main-inner
-          - if user_signed_in? && current_user.id == @post.user_id
-            %article#entry-26006613405060410.entry.hentry.js-entry-article.date-first.autopagerize_page_element.chars-200.words-100.mode-html.entry-odd{"data-keyword-campaign" => "", "data-publication-type" => "entry", "data-uuid" => "26006613405060410"}
-              .entry-inner
-                %header.entry-header
-                  .date.entry-date.first
-                    %a{:href => "https://daiki0730.hatenablog.com/archive/2019/08/25", :rel => "nofollow"}
-                      %time{:datetime => "2019-08-25T08:28:39Z", :pubdate => "", :title => "2019-08-25T08:28:39Z"}
-                        %span.date-year 2019
-                        %span.hyphen -
-                        %span.date-month 08
-                        %span.hyphen -
-                        %span.date-day 25
-                  .entry-title
-                    = @post.title
-                  %a.entry-title-link.bookmark
-                    =image_tag @post.image
-                .entry-content
-                  = @post.text
-                .customized-footer
-                  #entry-footer-secondary-modules.entry-footer-modules
-                .comment-box
-                  %h9.mypage コメント一覧
-                  - if @comments
-                    - @comments.each do |comment|
-                      .comments
-                        %strong.comment-name
-                          = link_to comment.user.nickname, "/users/#{comment.user_id}"
-                          ：
-                        = comment.text
-                    .comment-bottom
-                .comment-box-comment
-                - if current_user
-                  = form_tag("/posts/#{@post.id}/comments", method: :post) do
-                    .comment-form
-                      %textarea{:cols => "30", :name => "text", :placeholder => "コメントを書く", :rows => "2"}
-                    .comment-input
-                      %input{:type => "submit", :value => "SENT"}/
+          %article#entry-26006613405060410.entry.hentry.js-entry-article.date-first.autopagerize_page_element.chars-200.words-100.mode-html.entry-odd{"data-keyword-campaign" => "", "data-publication-type" => "entry", "data-uuid" => "26006613405060410"}
+            .entry-inner
+              %header.entry-header
+                .entry-name
+                  = "投稿者 #{@user.nickname}"
+                .date.entry-date.first
+                  %a{:href => "https://daiki0730.hatenablog.com/archive/2019/08/25", :rel => "nofollow"}
+                    %time{:datetime => "2019-08-25T08:28:39Z", :pubdate => "", :title => "2019-08-25T08:28:39Z"}
+                      %span.date-year 2019
+                      %span.hyphen -
+                      %span.date-month 08
+                      %span.hyphen -
+                      %span.date-day 25
+                .entry-title
+                  = @post.title
+                %a.entry-title-link.bookmark
+                  =image_tag @post.image
+              .entry-content
+                = @post.text
+              .customized-footer
+                #entry-footer-secondary-modules.entry-footer-modules
+              .comment-box-comment
+              - if current_user
+                = form_tag("/posts/#{@post.id}/comments", method: :post) do
+                  .comment-form
+                    %textarea{:cols => "30", :name => "text", :placeholder => "コメントを書く", :rows => "2"}
+                  .comment-input
+                    %input{:type => "submit", :value => "SENT"}/
+              .comment-box
+                %h9.mypage コメント一覧
+                - if @comments
+                  - @comments.each do |comment|
+                    .comments
+                      %strong.comment-name
+                        = link_to comment.user.nickname, "/users/#{comment.user_id}"
+                        ：
+                      = comment.text
+                  .comment-bottom
+
+              - if user_signed_in? && current_user.id == @post.user_id
                 .comment-box.box
                   %a
                     = link_to '記事を編集', "/posts/#{@post.id}/edit",class: "leave-delete-title", method: :get
@@ -52,3 +52,5 @@
 
 
 = render 'shared/main-footer'
+
+

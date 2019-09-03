@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
 
+
   def index
     @posts = Post.includes(:user).page(params[:page]).per(5).order("created_at DESC")
   end
@@ -29,9 +30,14 @@ class PostsController < ApplicationController
   def show
     @post = Post.find(params[:id])
     @comments = @post.comments.includes(:user)
+    @user = User.find_by(id: @post.user_id)
   end
 
-  def search
+  def slide
+    @posts = Post.all.page(params[:page]).per(5).order("created_at DESC")
+  end
+
+  def detail
   end
 
   private
@@ -43,5 +49,6 @@ class PostsController < ApplicationController
   def set_post
     @post = Post.all
   end
+
 
 end

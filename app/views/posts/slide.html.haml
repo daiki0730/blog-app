@@ -1,4 +1,28 @@
 = render 'shared/login-header'
+
+#index-banner.parallax-container
+  .section.no-pad-bot
+    .container
+      %br/
+      %br/
+      - if user_signed_in?
+        %h1.header.center.teal-text.text-lighten-2
+          = current_user.nickname
+      - else
+        %h1.header.center.teal-text.text-lighten-2 Welcome to BlogApp
+      .row.center
+        %h5.header.col.s12.light There is always light behind the clouds.
+      .row.center
+        - if user_signed_in?
+          .user_nav.grid-6
+            = link_to "New Post", new_post_path, class: 'post'
+        - else
+          .grid-6
+            = link_to "Sign up", new_user_registration_path, class: 'post'
+      %br/
+      %br/
+  .parallax
+    = image_tag 'background1.jpg',alt: 'Unsplashed background img 1'
 #content.hfeed
   #content-inner
     #wrapper
@@ -23,7 +47,4 @@
                     = link_to "/posts/#{post.id}",class: "leave-delete-title", method: :get do
                       = image_tag post.image
 
-          = paginate(@posts)
-
 = render 'shared/main-footer'
-
