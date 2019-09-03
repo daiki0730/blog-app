@@ -18,7 +18,7 @@
 ![result](https://user-images.githubusercontent.com/46291510/64193266-61672f00-ceb7-11e9-810c-c3737d4ac84f.gif)<br>
 ***
 ### ログイン画面
-![result](https://user-images.githubusercontent.com/46291510/64193266-61672f00-ceb7-11e9-810c-c3737d4ac84f.gif)<br>
+![result](https://user-images.githubusercontent.com/46291510/64194574-72656f80-ceba-11e9-95c7-427813adfcf0.png)<br>
 ***
 ### 投稿画面
 ![result](https://user-images.githubusercontent.com/46291510/64193266-61672f00-ceb7-11e9-810c-c3737d4ac84f.gif)<br>
