@@ -61,7 +61,7 @@ BlogApp for SAO(ブログアップ フォー エスエーオー)
 |provider|string||
 
 ##### アソシエーション
-- has_many :posts
+- has_many :posts<br>
 - has_many :comments
 
 ### postsテーブル
@@ -72,7 +72,7 @@ BlogApp for SAO(ブログアップ フォー エスエーオー)
 |text|image||
 |user_id|integer||
 ##### アソシエーション
-- belongs_to :user
+- belongs_to :user<br>
 - has_many :comments
 
 ### commentsテーブル
@@ -83,5 +83,5 @@ BlogApp for SAO(ブログアップ フォー エスエーオー)
 |text|text||
 
 ##### アソシエーション
-- belongs_to :post
+- belongs_to :post<br>
 - belongs_to :user
