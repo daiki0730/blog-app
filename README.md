@@ -4,7 +4,7 @@ BlogApp for SAO(ブログアップ フォー エスエーオー)
 
 <!-------------------------------------------------- -->
 ## プログラムの概要やビジュアル（UI）の紹介
-・「ソードアート・オンライン」の関連作品群の中から<br>
+・「ソードアート・オンライン(Sword Art Online、略してSAO)」の関連作品群の中から<br>
 主にアニメを通じて得た- テクノロジーの未来 -に関する情報を<br>
 分析してアウトプットするためのブログ。<br>
 <!-------------------------------------------------- -->
@@ -44,9 +44,9 @@ BlogApp for SAO(ブログアップ フォー エスエーオー)
 
 <!-------------------------------------------------- -->
 ## 使用技術
-
-
-
+- Twitter APIを利用したログイン認証機能を実装
+- gem deviseを利用したログイン、ログアウト機能を実装
+- RESTfulな設計を意識し記事の投稿、編集、削除、コメント機能を実装
 
 <!-------------------------------------------------- -->
 ## データベース設計
@@ -54,11 +54,15 @@ BlogApp for SAO(ブログアップ フォー エスエーオー)
 ### usersテーブル
 |カラム名|カラムの型|オプション|
 |------|----|-------|
-|name|string|null: false,add_index|
+|nickname|string|null: false,add_index|
 |email|text|null: false,add_index,unique|
 |password|string|null: false|
+|uid|string||
+|provider|string||
+
 ##### アソシエーション
-- has_many :post
+- has_many :posts
+- has_many :comments
 
 ### postsテーブル
 |カラム名|カラムの型|オプション|
@@ -66,7 +70,18 @@ BlogApp for SAO(ブログアップ フォー エスエーオー)
 |title|text||
 |text|text||
 |text|image||
+|user_id|integer||
 ##### アソシエーション
 - belongs_to :user
+- has_many :comments
 
+### commentsテーブル
+|カラム名|カラムの型|オプション|
+|------|----|-------|
+|user_id|integer||
+|post_id|integer||
+|text|text||
 
+##### アソシエーション
+- belongs_to :post
+- belongs_to :user
