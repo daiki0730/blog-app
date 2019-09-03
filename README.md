@@ -19,13 +19,13 @@
 <!-------------------------------------------------- -->
 ## クライアントの要求事項や設計仕様
 
-###usersテーブル
+### usersテーブル
 |カラム名|カラムの型|オプション|
 |------|----|-------|
 |name|string|null: false,add_index|
 |email|text|null: false,add_index,unique|
 |password|string|null: false|
-### アソシエーション
+##### アソシエーション
 - has_many :post
 
 ### postsテーブル
@@ -34,7 +34,7 @@
 |title|text||
 |text|text||
 |text|image||
-### アソシエーション
+##### アソシエーション
 - belongs_to :user
 
 <!-------------------------------------------------- -->
