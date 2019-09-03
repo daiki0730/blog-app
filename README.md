@@ -1,12 +1,31 @@
 # プロジェクト概要
-![result](https://user-images.githubusercontent.com/46291510/64193266-61672f00-ceb7-11e9-810c-c3737d4ac84f.gif)
-
-
 ## プログラム（プロジェクト）名
 「BlogApp for SAO」(ブログアップ フォー エスエーオー)
 
 <!-------------------------------------------------- -->
-## プログラムの概要やビジュアル（UI）の紹介
+## ビジュアル（UI）の紹介
+トップページ(ログイン前)
+![result](https://user-images.githubusercontent.com/46291510/64193266-61672f00-ceb7-11e9-810c-c3737d4ac84f.gif)
+トップページ(ログイン後)
+![result](https://user-images.githubusercontent.com/46291510/64193266-61672f00-ceb7-11e9-810c-c3737d4ac84f.gif)
+Twitter認証
+![result](https://user-images.githubusercontent.com/46291510/64193266-61672f00-ceb7-11e9-810c-c3737d4ac84f.gif)
+新規登録画面
+![result](https://user-images.githubusercontent.com/46291510/64193266-61672f00-ceb7-11e9-810c-c3737d4ac84f.gif)
+ログイン画面
+![result](https://user-images.githubusercontent.com/46291510/64193266-61672f00-ceb7-11e9-810c-c3737d4ac84f.gif)
+投稿画面
+![result](https://user-images.githubusercontent.com/46291510/64193266-61672f00-ceb7-11e9-810c-c3737d4ac84f.gif)
+編集画面
+![result](https://user-images.githubusercontent.com/46291510/64193266-61672f00-ceb7-11e9-810c-c3737d4ac84f.gif)
+削除画面
+![result](https://user-images.githubusercontent.com/46291510/64193266-61672f00-ceb7-11e9-810c-c3737d4ac84f.gif)
+マイページ(自身の投稿のみ表示)
+![result](https://user-images.githubusercontent.com/46291510/64193266-61672f00-ceb7-11e9-810c-c3737d4ac84f.gif)
+
+
+<!-------------------------------------------------- -->
+## プログラムの概要
 ・「ソードアート・オンライン(Sword Art Online、略してSAO)」の関連作品群の中から<br>
 主にアニメを通じて得た- テクノロジーの未来 -に関する情報を<br>
 分析してアウトプットするためのブログ。<br>
