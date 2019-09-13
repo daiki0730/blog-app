@@ -7,13 +7,13 @@
         %h1.header.center.teal-text.text-lighten-2
           = current_user.nickname
       - else
-        %h1.header.center.teal-text.text-lighten-2 Welcome to BlogApp for SAO
+        %h1.header.center.teal-text.text-lighten-2 Welcome to My App
       .row.center
-        %h5.header.col.s12.light This app was created to consider the technical aspects of Sword Art Online (SAO).
+        %h5.header.col.s12.light 日常のデザインを分析してアウトプットするためのブログ
       .row.center
         - if user_signed_in?
           .user_nav.grid-6
-            = link_to "New Post", new_post_path, class: 'post'
+            = link_to "新規投稿", new_post_path, class: 'post'
       %br/
       %br/
   .parallax
@@ -27,27 +27,27 @@
           = link_to new_user_registration_path do
             %h2.center.brown-text
               %i.material-icons.edit edit
-            %h5.center Sign up
-            %p.light Click here for new registration.It ’s super simple because you only need to set your name, email address and password.
+            %h5.center 新規登録
+            %p.light 記事を閲覧/投稿するためには会員登録が必要です。登録がまだの方はアイコンをクリックして新規登録をお願いします。
       .col.s12.m4
         .icon-block
           = link_to new_user_session_path do
             %h2.center.brown-text
               %i.material-icons.key vpn_key
-            %h5.center Login
-            %p.light If you are registered, please login here.I need to enter my email address and password, but it doesn't matter
+            %h5.center ログイン
+            %p.light 会員登録をされてる方はアイコンをクリックしてログインしてください。
       .col.s12.m4
         .icon-block
           = link_to '/auth/twitter', :id => "twitter" do
             %h2.center.brown-text
               = image_tag 'twitter_logo.png',alt: 'Unsplashed', size: '50x50'
-            %h5.center Twitter Login
-            %p.light You can log in if you have a Twitter account.It's great that you can log in easily. The time is money.
+            %h5.center Twitterログイン
+            %p.light Twitterのアカウントを使用してログインできます。アイコンをクリックしてアカウントを連携させてください。
 .parallax-container.valign-wrapper
   .section.no-pad-bot
     .container
       .row.center
-        %h5.header.col.s12.light This world may be a virtual space created by someone.
+        %h5.header.col.s12.light 正確な情報を伝えるにはデザインが重要である。
   .parallax
     = image_tag 'image2.jpg',alt: 'Unsplashed'
 .container
@@ -83,7 +83,7 @@
   .section.no-pad-bot
     .container
       .row.center
-        %h5.header.col.s12.light Is the SAO world a virtual image or the future of reality to come?
+        %h5.header.col.s12.light デザインとは「どう見えるか」ではなく、「どう機能するか」の問題である。
   .parallax
     = image_tag 'image3.jpg',alt: 'Unsplashed'
 

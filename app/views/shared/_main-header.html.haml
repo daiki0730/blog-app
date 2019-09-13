@@ -1,7 +1,7 @@
 %nav.white{:role => "navigation"}
   .nav-wrapper.container
     %a#logo-container
-      = link_to "BlogApp for SAO", root_path, class: 'brand-logo'
+      = link_to "BlogApp for Design", root_path, class: 'brand-logo'
     %ul.right.hide-on-med-and-down
       %li
         - if user_signed_in?
@@ -12,9 +12,9 @@
             = link_to user_path(id: current_user.id) do
               MyPage
           .user_nav.grid-6
-            = link_to "Logout", destroy_user_session_path, method: :delete
+            = link_to "ログアウト", destroy_user_session_path, method: :delete
         - else
           .user_nav.grid-6.grid-6
-            = link_to "Sign up", new_user_registration_path, class: 'Singup'
+            = link_to "新規登録", new_user_registration_path, class: 'Singup'
           .user_nav.grid-6.grid-6
-            = link_to "Login", new_user_session_path, class: 'Singup'
+            = link_to "ログイン", new_user_session_path, class: 'Singup'
