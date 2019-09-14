@@ -1,0 +1,6 @@
+.comment-box-comment
+= form_tag("/posts/#{@post.id}/comments", method: :post) do
+  .comment-form
+    %textarea{:cols => "30", :name => "text", :placeholder => "コメントを書く", :rows => "2"}
+  .comment-input
+    %input{:type => "submit", :value => "SENT"}/

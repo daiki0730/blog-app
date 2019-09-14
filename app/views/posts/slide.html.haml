@@ -5,13 +5,10 @@
     .container
       %br/
       %br/
-      - if user_signed_in?
-        %h1.header.center.teal-text.text-lighten-2
-          = current_user.nickname
-      - else
-        %h1.header.center.teal-text.text-lighten-2 BlogApp for Design
+      %h1.header.center.teal-text.text-lighten-2
+        BlogApp for Design
       .row.center
-        %h5.header.col.s12.light デザインとは「どう見えるか」ではなく、「どう機能するか」の問題である。
+        %h5.header.col.s12.light 投稿一覧
       .row.center
         - if user_signed_in?
           .user_nav.grid-6
@@ -30,18 +27,16 @@
               .entry-inner
                 %header.entry-header
                   .date.entry-date.first
-                    %a{:href => "https://daiki0730.hatenablog.com/archive/2019/08/25", :rel => "nofollow"}
-                      %time{:datetime => "2019-08-25T08:28:39Z", :pubdate => "", :title => "2019-08-25T08:28:39Z"}
-                        %span.date-year 2019
-                        %span.hyphen -
-                        %span.date-month 08
-                        %span.hyphen -
-                        %span.date-day 25
-                  %h1.entry-title
-                    = link_to "/posts/#{post.id}",class: "leave-delete-title",style: 'color: black;', method: :get do
-                      = post.title
-                  %a.entry-title-link.bookmark
+                    投稿者
+                    = post.user.nickname
+                  .date.entry-date.second
+                    %span
+                      = post.updated_at.strftime('%Y/%m/%d %H:%M:%S')
+                  .entry-title
                     = link_to "/posts/#{post.id}",class: "leave-delete-title", method: :get do
-                      = image_tag post.image
+                      = post.title
+
+
+          = paginate(@posts)
 
 = render 'shared/main-footer'

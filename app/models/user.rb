@@ -6,7 +6,12 @@ class User < ApplicationRecord
 
   has_many :posts
   has_many :comments
-  has_many :posts, through: :likes
+  has_many :likes, dependent: :destroy
+  has_many :liked_posts, through: :likes, source: :post
+
+  def already_liked?(post)
+    self.likes.exists?(post_id: post.id)
+  end
 
   def self.find_for_oauth(auth)
    user = User.where(uid: auth.uid, provider: auth.provider).first

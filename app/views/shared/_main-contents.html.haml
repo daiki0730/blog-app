@@ -7,7 +7,7 @@
         %h1.header.center.teal-text.text-lighten-2
           = current_user.nickname
       - else
-        %h1.header.center.teal-text.text-lighten-2 Welcome to My App
+        %h1.header.center.teal-text.text-lighten-2 Welcome to Blog App
       .row.center
         %h5.header.col.s12.light 日常のデザインを分析してアウトプットするためのブログ
       .row.center
@@ -28,7 +28,7 @@
             %h2.center.brown-text
               %i.material-icons.edit edit
             %h5.center 新規登録
-            %p.light 記事を閲覧/投稿するためには会員登録が必要です。登録がまだの方はアイコンをクリックして新規登録をお願いします。
+            %p.light 記事を閲覧/投稿するためにはアイコンをクリックして会員登録をお願いします。
       .col.s12.m4
         .icon-block
           = link_to new_user_session_path do
@@ -42,7 +42,7 @@
             %h2.center.brown-text
               = image_tag 'twitter_logo.png',alt: 'Unsplashed', size: '50x50'
             %h5.center Twitterログイン
-            %p.light Twitterのアカウントを使用してログインできます。アイコンをクリックしてアカウントを連携させてください。
+            %p.light Twitterのアカウントを使用してログインできます。
 .parallax-container.valign-wrapper
   .section.no-pad-bot
     .container

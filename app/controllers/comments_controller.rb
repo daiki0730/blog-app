@@ -5,6 +5,9 @@ class CommentsController < ApplicationController
     redirect_to "/posts/#{comment.post.id}"
   end
 
+  def new
+  end
+
   private
   def comment_params
     params.permit(:text, :post_id)

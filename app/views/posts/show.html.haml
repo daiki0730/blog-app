@@ -7,16 +7,12 @@
           %article#entry-26006613405060410.entry.hentry.js-entry-article.date-first.autopagerize_page_element.chars-200.words-100.mode-html.entry-odd{"data-keyword-campaign" => "", "data-publication-type" => "entry", "data-uuid" => "26006613405060410"}
             .entry-inner
               %header.entry-header
-                .entry-name
-                  = "投稿者 #{@user.nickname}"
                 .date.entry-date.first
-                  %a{:href => "https://daiki0730.hatenablog.com/archive/2019/08/25", :rel => "nofollow"}
-                    %time{:datetime => "2019-08-25T08:28:39Z", :pubdate => "", :title => "2019-08-25T08:28:39Z"}
-                      %span.date-year 2019
-                      %span.hyphen -
-                      %span.date-month 08
-                      %span.hyphen -
-                      %span.date-day 25
+                  投稿者
+                  = @post.user.nickname
+                .date.entry-date.second
+                  %span
+                    = @post.updated_at.strftime('%Y/%m/%d %H:%M:%S')
                 .entry-title
                   = @post.title
                 %a.entry-title-link.bookmark
@@ -24,14 +20,31 @@
               .entry-content
                 = @post.text
               .customized-footer
-                #entry-footer-secondary-modules.entry-footer-modules
-              .comment-box-comment
-              - if current_user
-                = form_tag("/posts/#{@post.id}/comments", method: :post) do
-                  .comment-form
-                    %textarea{:cols => "30", :name => "text", :placeholder => "コメントを書く", :rows => "2"}
-                  .comment-input
-                    %input{:type => "submit", :value => "SENT"}/
+                %h9.mypage
+                - if current_user.already_liked?(@post)
+                  .button-good
+                    = button_to "イイね！ #{@post.likes.count}", post_like_path(@post), class: 'good', method: :delete
+                - else
+                  .button-good
+                    = button_to "イイね！ #{@post.likes.count}", post_likes_path(@post), class: 'good'
+              .customized-footer-comment
+                %h9.mypage
+                  .button-comment
+                    = link_to "/posts/#{@post.id}/comments",class: "leave-delete-title", method: :post do
+                      コメントする
+              - if user_signed_in? && current_user.id == @post.user_id
+                .customized-footer-comment
+                  %h9.mypage
+                    = link_to '記事を編集', "/posts/#{@post.id}/edit",class: "leave-edit", method: :get
+                .customized-footer-comment
+                  %h9.mypage
+                    = link_to '記事を削除',"/posts/#{@post.id}", class: "leave-delete", method: :delete
+              .comment-box
+                .comment-box-good
+                  イイね！した人一覧
+                  - @post.liked_users.each do |user|
+                    %li.good
+                      = user.nickname
               .comment-box
                 %h9.mypage コメント一覧
                 - if @comments
@@ -41,15 +54,6 @@
                         = link_to comment.user.nickname, "/users/#{comment.user_id}"
                         ：
                       = comment.text
-                  .comment-bottom
-
-              - if user_signed_in? && current_user.id == @post.user_id
-                .comment-box.box
-                  %a
-                    = link_to '記事を編集', "/posts/#{@post.id}/edit",class: "leave-delete-title", method: :get
-                  %a
-                    = link_to '記事を削除',"/posts/#{@post.id}", class: "leave-delete-title", method: :delete
-
 
 = render 'shared/main-footer'
 

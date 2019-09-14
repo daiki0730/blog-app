@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
 
+  before_action :set_post, only: [:slide]
 
   def index
     @posts = Post.includes(:user).page(params[:page]).per(5).order("created_at DESC")
@@ -29,12 +30,14 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
+    @like = Like.new
     @comments = @post.comments.includes(:user)
     @user = User.find_by(id: @post.user_id)
   end
 
   def slide
     @posts = Post.all.page(params[:page]).per(5).order("created_at DESC")
+    @user = User.all
   end
 
   def detail

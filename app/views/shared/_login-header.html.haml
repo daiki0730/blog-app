@@ -1,13 +1,13 @@
 %nav.white{:role => "navigation"}
   .nav-wrapper.container
     %a#logo-container
-      = link_to "Blog App for Design", slide_posts_path, class: 'brand-logo'
+      = link_to "Blog App for Design", root_path, class: 'brand-logo'
     %ul.right.hide-on-med-and-down
       %li
         - if user_signed_in?
           .user_nav.grid-6
-            = link_to new_post_path do
-              新規投稿
+            = link_to slide_posts_path do
+              投稿一覧
           .user_nav.grid-6
             = link_to user_path(id: current_user.id) do
               マイページ
