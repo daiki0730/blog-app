@@ -6,4 +6,8 @@ class UsersController < ApplicationController
     @posts = user.posts.page(params[:page]).per(5).order("created_at DESC")
   end
 
+  def edit
+    @post = Post.find(params[:id])
+  end
+
 end

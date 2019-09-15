@@ -6,15 +6,13 @@ Rails.application.routes.draw do
   resources :posts do
     resources :likes, only: [:create, :destroy]
     resources :comments, only: [:create]
-    member do
-      post 'detail'
-    end
+
     collection do
-      get 'slide'
+      get :slide
     end
   end
 
-  resources :users, only: [:show]
+  resources :users, only: [:show, :edit]
 
   get "/auth/twitter/callback" => "omniauth_callbacks#twitter"
 

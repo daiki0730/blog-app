@@ -2,7 +2,8 @@
 
 .content.post
   .success
-    %h3 削除が完了しました
-    %a.btn{:href => "/users/#{current_user.id}"} MyPage
+    %h3.updated 削除が完了しました
+    .update
+      = link_to '記事へ戻る', post_path
 
 = render 'shared/main-footer'

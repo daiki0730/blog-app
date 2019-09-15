@@ -7,11 +7,12 @@
       %br/
       - if user_signed_in?
         %h1.header.center.teal-text.text-lighten-2
-          = current_user.nickname
+          BlogApp for Design
       - else
         %h1.header.center.teal-text.text-lighten-2 BlogApp for Design
       .row.center
-        %h5.header.col.s12.light マイページ
+        %h5.header.col.s12.light
+          = current_user.nickname+"さんのマイページ"
       .row.center
         - if user_signed_in?
           .user_nav.grid-6

@@ -3,6 +3,6 @@
 .content.post
   .success
     %h3 投稿が完了しました。
-    %a.btn{:href => "/users/#{current_user.id}"} MyPage
+    %a.btn{:href => "/users/#{current_user.id}",:class =>"btn"} MyPage
 
 = render 'shared/main-footer'

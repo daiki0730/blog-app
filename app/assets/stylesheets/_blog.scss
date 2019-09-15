@@ -33,7 +33,9 @@ h9.mypage, .comments {
 }
 
 nav.pagination{
-  margin: 30px 0 10px 200px;
+  margin: 30px 0 0 200px;
+  position: absolute;
+  bottom: 0;
 }
 
 nav.pagination,span.page {
@@ -230,12 +232,12 @@ li.good {
 }
 
 .button-comment {
-  input.comment-btn {
+  a.comment-btn {
     border-radius: 0px;
     background: #f9fafb;
     border: 1px solid #cfd8d8;
     color: black;
-    padding: 10px 15px 10px 7px;
+    padding: 9px 8px 9px 8px;
     width: 90px;
     font-size: 12px;
   }
@@ -292,3 +294,5 @@ li.good:first-child {
     background-color: #f5f5f5;
   }
 }
+
+

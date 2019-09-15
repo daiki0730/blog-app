@@ -1,14 +1,16 @@
 = render 'shared/main-header'
 
 .content.post
-  = form_tag("/posts/#{@post.id}", method: :patch ) do
+  = form_for @post do |f|
     %h3
       編集する
-    %input{:name => "title", :placeholder => "Title", :size => "50", :type => "text", :value => "#{@post.title}"}
-    %input{:autofocus => "true", :name => "image", :placeholder => "Image Url", :type => "text", :value => "#{@post.image}"}/
-    %textarea{:cols => "30", :name => "text", :placeholder => "Text", :rows => "10"}= @post.text
-    %input{:type => "submit", :value => "SENT", :class =>"submit_button"}/
-
+    = f.label :title, class: 'label_ttl'
+    = f.text_field :title, class: 'form_title', placeholder: 'post.title'
+    = f.label :image, class: 'label_image'
+    = f.file_field :image, class: 'form_image'
+    = f.label :text, class: 'label_text'
+    = f.text_area :text, class: 'form_text',placeholder: 'post.text'
+    = f.submit '送信', class: 'sub_btnn'
 
 = render 'shared/main-footer'
 

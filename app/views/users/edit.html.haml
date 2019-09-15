@@ -1,0 +1,11 @@
+= render 'shared/main-header'
+
+.content.post
+  = form_tag("/posts/#{@post.id}/comments", method: :post) do
+    %h3
+      コメントを書く
+    %textarea{:cols => "30", :name => "text", :placeholder => "テキスト", :rows => "2"}
+    %input{:type => "submit", :value => "SENT", :class =>"submit_btn"}/
+
+
+= render 'shared/main-footer'

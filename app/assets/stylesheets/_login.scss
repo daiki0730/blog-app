@@ -35,9 +35,20 @@ em {
   color: #9e9e9e;
 }
 
-.actions input{
-  margin: 20px 0 320px 130px;
+.actions {
+  input{
+  margin: 20px 0 280px 130px;
   width: 400px;
   padding: 10px;
   font-size: 18px;
+  }
+}
+
+.actions.new {
+  input{
+  margin: 20px 0 75px 130px;
+  width: 400px;
+  padding: 10px;
+  font-size: 18px;
+  }
 }

@@ -24,8 +24,8 @@
       = f.label :password_confirmation
       %br/
       = f.password_field :password_confirmation, autocomplete: "off"
-    .actions
-      = f.submit "Sign up"
+    .actions.new
+      = f.submit "新規登録"
 
 
 = render 'shared/main-footer'

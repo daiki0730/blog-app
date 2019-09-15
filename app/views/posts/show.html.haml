@@ -29,9 +29,9 @@
                     = button_to "イイね！ #{@post.likes.count}", post_likes_path(@post), class: 'good'
               .customized-footer-comment
                 %h9.mypage
+                = form_tag("/posts/#{@post.id}/comments", method: :post) do
                   .button-comment
-                    = link_to "/posts/#{@post.id}/comments",class: "leave-delete-title", method: :post do
-                      コメントする
+                    = link_to "コメントする", "/users/#{@post.id}/edit", class: 'comment-btn', method: :get
               - if user_signed_in? && current_user.id == @post.user_id
                 .customized-footer-comment
                   %h9.mypage
