@@ -39,21 +39,28 @@
                 .customized-footer-comment
                   %h9.mypage
                     = link_to '記事を削除',"/posts/#{@post.id}", class: "leave-delete", method: :delete
-              .comment-box
-                .comment-box-good
-                  イイね！した人一覧
-                  - @post.liked_users.each do |user|
-                    %li.good
-                      = user.nickname
-              .comment-box
-                %h9.mypage コメント一覧
-                - if @comments
-                  - @comments.each do |comment|
-                    .comments
-                      %strong.comment-name
-                        = link_to comment.user.nickname, "/users/#{comment.user_id}"
-                        ：
-                      = comment.text
+              - if @post.liked_users.present?
+                .comment-box
+                  .comment-box-good
+                    イイね！した人一覧
+                    - @post.liked_users.each do |user|
+                      %li.good
+                        = user.nickname
+              - else
+                .div
+
+              - if @comments.present?
+                .comment-box
+                  %h9.mypage コメント一覧
+                  - if @comments
+                    - @comments.each do |comment|
+                      .comments
+                        %strong.comment-name
+                          = link_to comment.user.nickname, "/users/#{comment.user_id}"
+                          ：
+                        = comment.text
+              - else
+                .div
 
 = render 'shared/main-footer'
 
