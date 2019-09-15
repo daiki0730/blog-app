@@ -2,7 +2,8 @@
 
 .content.post
   .success
-    %h3 投稿が完了しました。
-    %a.btn{:href => "/users/#{current_user.id}",:class =>"btn"} MyPage
+    %h3.updated 投稿が完了しました
+    .update
+      = link_to '記事一覧へ戻る', slide_posts_path
 
 = render 'shared/main-footer'
