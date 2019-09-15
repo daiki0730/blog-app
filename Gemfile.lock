@@ -87,6 +87,8 @@ GEM
     devise-i18n (1.8.2)
       devise (>= 4.6)
     devise-i18n-views (0.3.7)
+    domain_name (0.5.20190701)
+      unf (>= 0.0.5, < 1.0.0)
     erubis (2.7.0)
     excon (0.66.0)
     execjs (2.7.0)
@@ -125,6 +127,15 @@ GEM
       haml (>= 4.0, < 6)
       nokogiri (>= 1.6.0)
       ruby_parser (~> 3.5)
+    http (4.1.1)
+      addressable (~> 2.3)
+      http-cookie (~> 1.0)
+      http-form_data (~> 2.0)
+      http_parser.rb (~> 0.6.0)
+    http-cookie (1.0.3)
+      domain_name (~> 0.5)
+    http-form_data (2.1.1)
+    http_parser.rb (0.6.0)
     i18n (1.6.0)
       concurrent-ruby (~> 1.0)
     image_processing (1.9.3)
@@ -263,6 +274,9 @@ GEM
       thread_safe (~> 0.1)
     uglifier (4.1.20)
       execjs (>= 0.3.0, < 3)
+    unf (0.1.4)
+      unf_ext
+    unf_ext (0.0.7.6)
     unicorn (5.4.1)
       kgio (~> 2.6)
       raindrops (~> 0.7)
@@ -294,6 +308,7 @@ DEPENDENCIES
   devise-i18n-views
   fog-aws
   haml-rails
+  http
   jbuilder (~> 2.5)
   jquery-rails
   kaminari
