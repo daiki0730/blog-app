@@ -65,9 +65,13 @@
 
 = render 'shared/main-footer'
 
-
 %h2 gmap
+/ 地名入力用のinputを追加
+%input#address{:type => "textbox", :value => "Sydney, NSW"}/
+/ buttonをクリックしたらcodeAddressを実行　
+%input{:onclick => "codeAddress()", :type => "button", :value => "Encode"}/
 #map
+
 %script{:async => "", :defer => "defer", :src => "https://maps.googleapis.com/maps/api/js?key=#{ENV["GOOGLE_MAP_KEY"]}&callback=initMap"}
 
 
