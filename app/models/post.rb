@@ -1,6 +1,5 @@
 class Post < ApplicationRecord
   mount_uploader :image, ImageUploader
-  after_validation :geocode
 
   belongs_to :user
   has_many :comments, dependent: :destroy
