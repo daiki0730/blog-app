@@ -18,6 +18,9 @@
 ### 記事一覧(全ユーザーの記事)
 ![result](https://i.gyazo.com/ece0dbf23d28de57400572846187a2e6.gif)<br>
 ***
+### 記事詳細画面
+![result](https://i.gyazo.com/da560e906b491d952e2985a36ffbe52e.gif)<br>
+***
 ### Twitter認証
 ![result](https://user-images.githubusercontent.com/46291510/64194836-05060e80-cebb-11e9-84ea-0cd90510884b.png)<br>
 ***
@@ -29,9 +32,6 @@
 ***
 ### 投稿画面
 ![result](https://user-images.githubusercontent.com/46291510/64195110-a1301580-cebb-11e9-9161-3976db128cf7.png)<br>
-***
-### 記事詳細画面
-![result](https://user-images.githubusercontent.com/46291510/64196293-84e1a800-cebe-11e9-8c5a-5924afe873b4.gif)<br>
 ***
 ### 編集画面
 ![result](https://user-images.githubusercontent.com/46291510/64195306-1ac80380-cebc-11e9-8b96-0d6d6e66e128.png)<br>
