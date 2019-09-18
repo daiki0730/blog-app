@@ -4,6 +4,8 @@
   = form_for @post do |f|
     = f.label :title, class: 'label_title'
     = f.text_field :title, class: 'form_title', placeholder: 'タイトル'
+    = f.label :address, class: 'label_image'
+    = f.text_field :address, class: 'form_title', placeholder: '撮影場所/建物名など'
     = f.label :image, class: 'label_image'
     = f.file_field :image, class: 'form_image'
     = f.label :text, class: 'label_text'
@@ -11,4 +13,3 @@
     = f.submit 'SENT', class: 'submit_button'
 
 = render 'shared/main-footer'
-

@@ -12,6 +12,8 @@ Rails.application.routes.draw do
     end
   end
 
+  get '/post_request', to: 'posts#show', as: 'post_request'
+
   resources :users, only: [:show, :edit]
 
   get "/auth/twitter/callback" => "omniauth_callbacks#twitter"
