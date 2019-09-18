@@ -21,6 +21,15 @@
 ### 記事詳細画面
 ![result](https://i.gyazo.com/da560e906b491d952e2985a36ffbe52e.gif)<br>
 ***
+### 記事詳細画面(GoogleMap)
+![result](https://i.gyazo.com/98ac7fb5d6f28cfb7aefb14b5dcd42c5.gif)<br>
+***
+### 編集画面
+![result](https://user-images.githubusercontent.com/46291510/64195306-1ac80380-cebc-11e9-8b96-0d6d6e66e128.png)<br>
+***
+### 削除画面
+![result](https://user-images.githubusercontent.com/46291510/64195491-8f02a700-cebc-11e9-87bc-181d373bc1c7.png)<br>
+***
 ### Twitter認証
 ![result](https://user-images.githubusercontent.com/46291510/64194836-05060e80-cebb-11e9-84ea-0cd90510884b.png)<br>
 ***
@@ -32,16 +41,6 @@
 ***
 ### 投稿画面
 ![result](https://user-images.githubusercontent.com/46291510/64195110-a1301580-cebb-11e9-9161-3976db128cf7.png)<br>
-***
-### 編集画面
-![result](https://user-images.githubusercontent.com/46291510/64195306-1ac80380-cebc-11e9-8b96-0d6d6e66e128.png)<br>
-***
-### 削除画面
-![result](https://user-images.githubusercontent.com/46291510/64195491-8f02a700-cebc-11e9-87bc-181d373bc1c7.png)<br>
-***
-### マイページ(自身の投稿のみ表示)
-![result](https://user-images.githubusercontent.com/46291510/64195393-5367dd00-cebc-11e9-9f1f-b5f1f6327ee8.png)<br>
-
 
 
 
