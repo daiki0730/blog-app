@@ -20,6 +20,14 @@
               .entry-content
                 = @post.text
               .customized-footer
+                .gmap Google Map
+                %input#address{:type => "textbox", :value => @post.address, placeholder: '住所を入力', class: "gmap"}/
+                / buttonをクリックしたらcodeAddressを実行
+                %input{:onclick => "codeAddress()", :type => "button", :value => "送信"}/
+                #map
+                %script{:async => "", :defer => "", :src => "https://maps.googleapis.com/maps/api/js?key=#{ENV["GOOGLE_MAP_KEY"]}&callback=initMap"}
+                %br
+              .customized-footer
                 %h9.mypage
                 - if current_user.already_liked?(@post)
                   .button-good
@@ -62,6 +70,8 @@
               - else
                 .div
 
+
 = render 'shared/main-footer'
+
 
 
