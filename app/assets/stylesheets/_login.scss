@@ -35,9 +35,18 @@ em {
   color: #9e9e9e;
 }
 
+.actions_login {
+  input{
+  margin: 20px 0 312px 130px;
+  width: 400px;
+  padding: 10px;
+  font-size: 18px;
+  }
+}
+
 .actions {
   input{
-  margin: 20px 0 280px 130px;
+  margin: 20px 0 312px 130px;
   width: 400px;
   padding: 10px;
   font-size: 18px;
@@ -46,7 +55,7 @@ em {
 
 .actions.new {
   input{
-  margin: 20px 0 75px 130px;
+  margin: 20px 0 110px 130px;
   width: 400px;
   padding: 10px;
   font-size: 18px;

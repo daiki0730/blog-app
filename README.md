@@ -13,7 +13,7 @@
 ![result](https://i.gyazo.com/9faa8c3b0f3d6ab19f92cb1e56fe970a.gif)<br>
 ***
 ### トップページ(ログイン後)
-![result]([![Image from Gyazo](https://i.gyazo.com/40e5faa460499eda72e57d05f6a7ba70.gif)](https://gyazo.com/40e5faa460499eda72e57d05f6a7ba70))<br>
+![result](https://i.gyazo.com/40e5faa460499eda72e57d05f6a7ba70.gif)<br>
 ***
 ### Twitter認証
 ![result](https://user-images.githubusercontent.com/46291510/64194836-05060e80-cebb-11e9-84ea-0cd90510884b.png)<br>
