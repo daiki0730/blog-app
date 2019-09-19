@@ -77,8 +77,10 @@ GoogleMapと連携し撮影場所の共有が可能。<br>
 ##### アソシエーション
 - has_many :posts<br>
 - has_many :comments
+- has_many :likes<br>
+- has_many :likes_users
 
-### postsテーブル
+### postsテーブル(投稿機能)
 |カラム名|カラムの型|オプション|
 |------|----|-------|
 |title|text||
@@ -87,9 +89,12 @@ GoogleMapと連携し撮影場所の共有が可能。<br>
 |user_id|integer||
 ##### アソシエーション
 - belongs_to :user<br>
-- has_many :comments
+- has_many :comments<br>
+- has_many :likes<br>
+- has_many :likes_users
 
-### commentsテーブル
+
+### commentsテーブル(コメント機能)
 |カラム名|カラムの型|オプション|
 |------|----|-------|
 |user_id|integer||
@@ -100,7 +105,7 @@ GoogleMapと連携し撮影場所の共有が可能。<br>
 - belongs_to :post<br>
 - belongs_to :user
 
-### commentsテーブル
+### likesテーブル(中間テーブル/いいね機能)
 |カラム名|カラムの型|オプション|
 |------|----|-------|
 |user_id|integer||
