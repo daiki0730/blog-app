@@ -23,23 +23,11 @@ GoogleMapと連携し撮影場所の共有が可能。<br>
 ### 記事詳細画面(GoogleMap)
 ![result](https://i.gyazo.com/98ac7fb5d6f28cfb7aefb14b5dcd42c5.gif)<br>
 ***
-### 編集画面
-![result](https://user-images.githubusercontent.com/46291510/64195306-1ac80380-cebc-11e9-8b96-0d6d6e66e128.png)<br>
-***
-### 削除画面
-![result](https://user-images.githubusercontent.com/46291510/64195491-8f02a700-cebc-11e9-87bc-181d373bc1c7.png)<br>
-***
 ### Twitter認証
 ![result](https://user-images.githubusercontent.com/46291510/64194836-05060e80-cebb-11e9-84ea-0cd90510884b.png)<br>
 ***
-### 新規登録画面
-![result](https://user-images.githubusercontent.com/46291510/64194706-c83a1780-ceba-11e9-9ff1-292aed7da180.png)<br>
-***
-### ログイン画面
-![result](https://user-images.githubusercontent.com/46291510/64194574-72656f80-ceba-11e9-95c7-427813adfcf0.png)<br>
-***
 ### 投稿画面
-![result](https://user-images.githubusercontent.com/46291510/64195110-a1301580-cebb-11e9-9161-3976db128cf7.png)<br>
+![result](https://user-images.githubusercontent.com/46291510/65245742-19d3da80-db28-11e9-97e4-f826424b21a8.png)<br>
 
 
 
